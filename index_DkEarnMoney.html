@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dk Earn Money</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #0f172a, #1e293b);
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: #111827;
+      color: #38bdf8;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .balance {
+      font-size: 28px;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+    button {
+      width: 80%;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      color: white;
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #06b6d4, #4f46e5);
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .loading {
+      color: #facc15;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>💸 Dk Earn Money</header>
+  <div class="container">
+    <div class="card">
+      <h3>Today’s Earnings</h3>
+      <div class="balance">$ <span id="balance">0.00</span></div>
+      <p class="loading" id="status">Ad system loading...</p>
+      <button onclick="earnMoney()">🎬 Watch Ad (+$2)</button>
+      <button style="background: #16a34a;" onclick="withdraw()">💵 Withdraw</button>
+    </div>
+  </div>
+  <div class="footer">
+    © 2025 Dk Earn Money | Powered by Telegram Mini App
+  </div>
+
+  <script>
+    let balance = 0;
+    function earnMoney() {
+      document.getElementById("status").innerText = "Watching ad...";
+      setTimeout(() => {
+        balance += 2;
+        document.getElementById("balance").innerText = balance.toFixed(2);
+        document.getElementById("status").innerText = "You earned $2 ✅";
+      }, 2000);
+    }
+
+    function withdraw() {
+      alert("Withdraw feature is currently unavailable. Coming soon!");
+    }
+  </script>
+</body>
+</html>
